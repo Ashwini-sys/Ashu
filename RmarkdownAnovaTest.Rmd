@@ -1,0 +1,322 @@
+---
+title: "linearregressionRmarkdown"
+author: "Team"
+date: "07/12/2020"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+Property_Price <- read.csv("D:/data science/projectlinearregression/Property_Price.csv", stringsAsFactors=TRUE)
+View(Property_Price)
+
+Pr<-read.csv("D:/data science/projectlinearregression/Property_Price.csv", stringsAsFactors=TRUE)
+View(Pr)
+
+library("VIM")
+Pr<-kNN(Pr)
+```
+```{r}
+##Zoning class
+plot(Sale_Price~Zoning_Class, data = Pr, col = "red")
+results<-aov (Sale_Price~Zoning_Class , data = Pr)
+summary(results)
+TukeyHSD(results)
+
+##Road Type
+plot(Sale_Price~Road_Type, data = Pr, col = "red")
+results<-aov (Sale_Price~Road_Type , data = Pr)
+summary(results)
+TukeyHSD(results)
+
+##Lane Type
+plot(Sale_Price~Lane_Type, data = Pr, col = "red")
+results<-aov (Sale_Price~Lane_Type , data = Pr)
+summary(results)
+TukeyHSD(results)
+```
+```{r}
+##Property_Shape
+plot(Sale_Price~Property_Shape, data = Pr, col = "red")
+results<-aov (Sale_Price~Property_Shape , data = Pr)
+summary(results)
+TukeyHSD(results)
+
+##Land_Outline
+plot(Sale_Price~Land_Outline, data = Pr, col = "red")
+results<-aov (Sale_Price~Land_Outline , data = Pr)
+summary(results)
+TukeyHSD(results)
+```
+```{r}
+##Utility_Type
+plot(Sale_Price~Utility_Type, data = Pr, col = "red")
+results<-aov (Sale_Price~Utility_Type , data = Pr)
+summary(results)
+TukeyHSD(results)
+
+##Lot_Configuration
+plot(Sale_Price~Lot_Configuration, data = Pr, col = "red")
+results<-aov (Sale_Price~Lot_Configuration , data = Pr)
+summary(results)
+TukeyHSD(results)
+```
+```{r}
+##Property_Slope
+plot(Sale_Price~Property_Slope, data = Pr, col = "red")
+results<-aov (Sale_Price~Property_Slope , data = Pr)
+summary(results)
+TukeyHSD(results)
+
+##Neighborhood
+plot(Sale_Price~Neighborhood, data = Pr, col = "red")
+results<-aov (Sale_Price~Neighborhood , data = Pr)
+summary(results)
+TukeyHSD(results)
+```
+```{r}
+##Condition1
+plot(Sale_Price~Condition1, data = Pr, col = "red")
+results<-aov (Sale_Price~Condition1 , data = Pr)
+summary(results)
+TukeyHSD(results)
+
+##Condition2
+plot(Sale_Price~Condition2, data = Pr, col = "red")
+results<-aov (Sale_Price~Condition2 , data = Pr)
+summary(results)
+TukeyHSD(results)
+```
+```{r}
+##House_Type
+plot(Sale_Price~House_Type, data = Pr, col = "red")
+results<-aov (Sale_Price~House_Type , data = Pr)
+summary(results)
+TukeyHSD(results)
+
+##House_Design
+plot(Sale_Price~House_Design, data = Pr, col = "red")
+results<-aov (Sale_Price~House_Design , data = Pr)
+summary(results)
+TukeyHSD(results)
+```
+```{r}
+##Roof_Design
+plot(Sale_Price~Roof_Design, data = Pr, col = "red")
+results<-aov (Sale_Price~Roof_Design , data = Pr)
+summary(results)
+TukeyHSD(results)
+
+##Roof_Quality
+plot(Sale_Price~Roof_Quality, data = Pr, col = "red")
+results<-aov (Sale_Price~Roof_Quality , data = Pr)
+summary(results)
+TukeyHSD(results)
+```
+```{r}
+##Exterior1st
+plot(Sale_Price~Exterior1st, data = Pr, col = "red")
+results<-aov (Sale_Price~Exterior1st , data = Pr)
+summary(results)
+TukeyHSD(results)
+
+##Exterior2nd
+plot(Sale_Price~Exterior2nd, data = Pr, col = "red")
+results<-aov (Sale_Price~Exterior2nd , data = Pr)
+summary(results)
+TukeyHSD(results)
+```
+```{r}
+##Brick_Veneer_Type
+plot(Sale_Price~Brick_Veneer_Type, data = Pr, col = "red")
+results<-aov (Sale_Price~Brick_Veneer_Type , data = Pr)
+summary(results)
+TukeyHSD(results)
+
+##Exterior_Material
+plot(Sale_Price~Exterior_Material, data = Pr, col = "red")
+results<-aov (Sale_Price~Exterior_Material , data = Pr)
+summary(results)
+TukeyHSD(results)
+```
+```{r}
+##Exterior_Condition
+plot(Sale_Price~Exterior_Condition, data = Pr, col = "red")
+results<-aov (Sale_Price~Exterior_Condition , data = Pr)
+summary(results)
+TukeyHSD(results)
+
+##Exterior_Material
+plot(Sale_Price~Exterior_Material, data = Pr, col = "red")
+results<-aov (Sale_Price~Exterior_Material , data = Pr)
+summary(results)
+TukeyHSD(results)
+```
+```{r}
+##Foundation_Type
+plot(Sale_Price~Foundation_Type, data = Pr, col = "red")
+results<-aov (Sale_Price~Foundation_Type , data = Pr)
+summary(results)
+TukeyHSD(results)
+
+##Basement_Height
+plot(Sale_Price~Basement_Height, data = Pr, col = "red")
+results<-aov (Sale_Price~Basement_Height , data = Pr)
+summary(results)
+TukeyHSD(results)
+```
+```{r}
+##Basement_Condition
+plot(Sale_Price~Basement_Condition, data = Pr, col = "red")
+results<-aov (Sale_Price~Basement_Condition , data = Pr)
+summary(results)
+TukeyHSD(results)
+
+##Exposure_Level
+plot(Sale_Price~Exposure_Level, data = Pr, col = "red")
+results<-aov (Sale_Price~Exposure_Level , data = Pr)
+summary(results)
+TukeyHSD(results)
+```
+```{r}
+##BsmtFinType1
+plot(Sale_Price~BsmtFinType1, data = Pr, col = "red")
+results<-aov (Sale_Price~BsmtFinType1 , data = Pr)
+summary(results)
+TukeyHSD(results)
+
+##BsmtFinType2
+plot(Sale_Price~BsmtFinType2, data = Pr, col = "red")
+results<-aov (Sale_Price~BsmtFinType2 , data = Pr)
+summary(results)
+TukeyHSD(results)
+```
+```{r}
+##Heating_Type
+plot(Sale_Price~Heating_Type, data = Pr, col = "red")
+results<-aov (Sale_Price~Heating_Type , data = Pr)
+summary(results)
+TukeyHSD(results)
+
+##Heating_Quality
+plot(Sale_Price~Heating_Quality, data = Pr, col = "red")
+results<-aov (Sale_Price~Heating_Quality , data = Pr)
+summary(results)
+TukeyHSD(results)
+```
+```{r}
+##Air_Conditioning
+plot(Sale_Price~Air_Conditioning, data = Pr, col = "red")
+results<-aov (Sale_Price~Air_Conditioning , data = Pr)
+summary(results)
+TukeyHSD(results)
+
+##Electrical_System
+plot(Sale_Price~Electrical_System, data = Pr, col = "red")
+results<-aov (Sale_Price~Electrical_System , data = Pr)
+summary(results)
+TukeyHSD(results)
+```
+```{r}
+##Kitchen_Quality
+plot(Sale_Price~Kitchen_Quality, data = Pr, col = "red")
+results<-aov (Sale_Price~Kitchen_Quality , data = Pr)
+summary(results)
+TukeyHSD(results)
+
+##Functional_Rate
+plot(Sale_Price~Functional_Rate, data = Pr, col = "red")
+results<-aov (Sale_Price~Functional_Rate , data = Pr)
+summary(results)
+TukeyHSD(results)
+```
+```{r}
+##Fireplace_Quality
+plot(Sale_Price~Fireplace_Quality, data = Pr, col = "red")
+results<-aov (Sale_Price~Fireplace_Quality , data = Pr)
+summary(results)
+TukeyHSD(results)
+
+##Garage
+plot(Sale_Price~Garage, data = Pr, col = "red")
+results<-aov (Sale_Price~Garage , data = Pr)
+summary(results)
+TukeyHSD(results)
+```
+```{r}
+##Garage_Finish_Year
+plot(Sale_Price~Garage_Finish_Year, data = Pr, col = "red")
+results<-aov (Sale_Price~Garage_Finish_Year , data = Pr)
+summary(results)
+TukeyHSD(results)
+
+##Garage_Quality
+plot(Sale_Price~Garage_Quality, data = Pr, col = "red")
+results<-aov (Sale_Price~Garage_Quality , data = Pr)
+summary(results)
+TukeyHSD(results)
+```
+```{r}
+##Garage_Condition
+plot(Sale_Price~Garage_Condition, data = Pr, col = "red")
+results<-aov (Sale_Price~Garage_Condition , data = Pr)
+summary(results)
+TukeyHSD(results)
+
+##Pavedd_Drive
+plot(Sale_Price~Pavedd_Drive, data = Pr, col = "red")
+results<-aov (Sale_Price~Pavedd_Drive , data = Pr)
+summary(results)
+TukeyHSD(results)
+```
+```{r}
+##Pool_Quality
+plot(Sale_Price~Pool_Quality, data = Pr, col = "red")
+results<-aov (Sale_Price~Pool_Quality , data = Pr)
+summary(results)
+TukeyHSD(results)
+
+##Fence_Quality
+plot(Sale_Price~Fence_Quality, data = Pr, col = "red")
+results<-aov (Sale_Price~Fence_Quality , data = Pr)
+summary(results)
+TukeyHSD(results)
+```
+```{r}
+##Miscellaneous_Feature
+plot(Sale_Price~Miscellaneous_Feature, data = Pr, col = "red")
+results<-aov (Sale_Price~Miscellaneous_Feature , data = Pr)
+summary(results)
+TukeyHSD(results)
+
+##Sale_Type
+plot(Sale_Price~Sale_Type, data = Pr, col = "red")
+results<-aov (Sale_Price~Sale_Type , data = Pr)
+summary(results)
+TukeyHSD(results)
+```
+```{r}
+##Sale_Condition
+plot(Sale_Price~Sale_Condition, data = Pr, col = "red")
+results<-aov (Sale_Price~Sale_Condition , data = Pr)
+summary(results)
+TukeyHSD(results)
+```
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
